@@ -64,8 +64,8 @@ const treeLevels = (root) => {
   // d   e     f
   
   console.log(treeLevels(a)) // ->
-  // [
-  //   ['a'],
-  //   ['b', 'c'],
-  //   ['d', 'e', 'f']
-  // ]
+//   [
+//     ['a'],
+//     ['b', 'c'],
+//     ['d', 'e', 'f']
+//   ]
