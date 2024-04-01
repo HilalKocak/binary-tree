@@ -13,19 +13,19 @@ const treeValueCount = (root, target) => {
   };
 
 
-const treeValueCount2 = (root, target) => {
+  const treeValueCount2 = (root, target) => {
     if(root === null) return 0
+    let count = 0
     const queue = [root]
     
     while(queue.length > 0){
       const current = queue.shift()
       if(current.val === target) count += 1
-      if(current.left !== null) queue.push(curret.left)
+      if(current.left !== null) queue.push(current.left)
       if(current.right !== null) queue.push(current.right)
     }
     return count
   };
-  
   const a = new Node(12);
   const b = new Node(6);
   const c = new Node(6);
