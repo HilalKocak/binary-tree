@@ -45,4 +45,4 @@ const treeValueCount = (root, target) => {
   //  / \     \
   // 4   6     12
   
-  console.log(treeValueCount(a,  6))
+  console.log(treeValueCount2(a,  6))
