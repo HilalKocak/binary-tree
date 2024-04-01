@@ -32,6 +32,32 @@ const levelAverages = (root) => {
     return avg
   };
 
+
+
+//recursive
+const levelAverages2 = (root) => {
+    let levels =[]
+    levelAverages_(root, levels, 0)
+    const avg = levels.map(subArray=>{
+      let sum = subArray.reduce((acc, num) => acc+num, 0)
+      return sum / subArray.length
+    })
+    return avg
+  };
+  
+  const levelAverages_ = (root, levels, levelNum) =>{
+    if(root === null) return
+    if(levels.length === levelNum){
+      levels.push([root.val])
+    }else{
+      levels[levelNum].push(root.val)
+    }
+    levelAverages_(root.left, levels, levelNum+1)
+    levelAverages_(root.right, levels, levelNum+1)
+    
+  }
+
+  
 const a = new Node(3);
 const b = new Node(11);
 const c = new Node(4);
